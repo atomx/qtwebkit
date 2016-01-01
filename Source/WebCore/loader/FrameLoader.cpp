@@ -2791,7 +2791,7 @@ bool FrameLoader::handleBeforeUnloadEvent(Chrome& chrome, FrameLoader* frameLoad
 
     // We should only display the beforeunload dialog for an iframe if its SecurityOrigin matches all
     // ancestor frame SecurityOrigins up through the navigating FrameLoader.
-    if (frameLoaderBeingNavigated != this) {
+    /*if (frameLoaderBeingNavigated != this) {
         Frame* parentFrame = m_frame->tree()->parent();
         while (parentFrame) {
             Document* parentDocument = parentFrame->document();
@@ -2811,7 +2811,7 @@ bool FrameLoader::handleBeforeUnloadEvent(Chrome& chrome, FrameLoader* frameLoad
         // The navigatingFrameLoader should always be in our ancestory.
         ASSERT(parentFrame);
         ASSERT(parentFrame->loader() == frameLoaderBeingNavigated);
-    }
+    }*/
 
     frameLoaderBeingNavigated->m_currentNavigationHasShownBeforeUnloadConfirmPanel = true;
 
